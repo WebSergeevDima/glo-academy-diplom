@@ -1,1 +1,1 @@
-(()=>{"use strict";document.querySelector(".up").addEventListener("click",(()=>{console.log()}))})();
+(()=>{"use strict";(()=>{const e=document.querySelector("body"),t=document.querySelector(".header-wrapper"),o=document.getElementById("services"),c=document.querySelector(".up");document.addEventListener("scroll",(e=>{const n=t.clientHeight,r=o.getBoundingClientRect().top;c.style.display=r<n?"block":"none"})),c.addEventListener("click",(()=>{e.scrollIntoView({behavior:"smooth",block:"start"})}))})()})();
