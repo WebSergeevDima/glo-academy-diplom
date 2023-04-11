@@ -11,7 +11,7 @@ export class Modal {
         this._modalOverlay = document.querySelector('.modal-overlay');
     }
 
-    setDisplay(display) {
+    set display(display) {
         this._modalCallback.style.display = display;
         this._modalOverlay.style.display = display;
     }

@@ -7,12 +7,15 @@ export const callback = () => {
 
     body.addEventListener('click', e => {
 
-        if (e.target.classList.contains('callback-btn') || e.target.classList.contains('button-services')) {
-            modal.setDisplay('block');
+        if (e.target.classList.contains('callback-btn') ||
+            e.target.classList.contains('button-services') ||
+            e.target.classList.contains('fancyboxModal')
+        ) {
+            modal.display = 'block';
         }
 
         if (e.target.closest('.modal-close') || e.target.closest('.modal-overlay')) {
-            modal.setDisplay('none');
+            modal.display = 'none';
         }
 
     });
