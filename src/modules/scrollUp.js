@@ -6,11 +6,17 @@ const scrollUp = () => {
     const services = document.getElementById('services');
     const up = document.querySelector('.up');
 
-    document.addEventListener('scroll', (e) => {
+    const displayButtonUp = () => {
         const headerWrapperHeight = headerWrapper.clientHeight;
         const servicesTop = services.getBoundingClientRect().top;
 
-        servicesTop < headerWrapperHeight ?  up.style.display = 'block' :  up.style.display = 'none';
+        servicesTop < headerWrapperHeight ? up.style.display = 'block' : up.style.display = 'none';
+    }
+
+    displayButtonUp();
+
+    document.addEventListener('scroll', () => {
+        displayButtonUp();
     });
 
     up.addEventListener('click', () => {
