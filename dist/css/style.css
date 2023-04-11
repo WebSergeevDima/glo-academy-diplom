@@ -856,7 +856,45 @@ hr.white {
 	overflow: hidden;
 	height: 450px;
 	position: relative;
+	display: none;
 }
+
+.top-slider .item.active {
+	display: block;
+}
+.top-slider .item.active .table {
+	opacity: 1;
+	visibility: visible;
+}
+
+.top-slider__dots {
+	position: absolute;
+	bottom: 20px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+.top-slider__dots-item {
+	width: 16px;
+	height: 16px;
+	border: 2px #fff solid;
+	border-radius: 100%;
+	margin: 0 3px;
+	cursor: pointer;
+	transition: .2s;
+	z-index: 20;
+}
+
+.top-slider__dots-item.active,
+.top-slider__dots-item:hover {
+	background: #fff;
+}
+
 .top-slider .item:before {
 	content: "";
 	display: block;
