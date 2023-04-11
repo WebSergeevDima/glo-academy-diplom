@@ -7,7 +7,7 @@ export const callback = () => {
 
     body.addEventListener('click', e => {
 
-        if (e.target.classList.contains('callback-btn')) {
+        if (e.target.classList.contains('callback-btn') || e.target.classList.contains('button-services')) {
             modal.setDisplay('block');
         }
 
