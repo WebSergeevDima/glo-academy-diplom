@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("module 1"),console.log("module 2")})();
+(()=>{"use strict";document.querySelector(".up").addEventListener("click",(()=>{console.log()}))})();
