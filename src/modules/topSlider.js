@@ -25,6 +25,9 @@ const topSlider = () => {
 
                 isSetActive = true;
                 item.classList.add('active');
+                if(item.querySelector('.title-h1')) {
+                    item.querySelector('.title-h1').classList.remove('big');
+                }
                 dotsItems[index].classList.add('active');
 
                 if (index < slides.length - 1) {
@@ -35,6 +38,9 @@ const topSlider = () => {
 
             } else {
                 item.classList.remove('active');
+                if(item.querySelector('.title-h1')) {
+                    item.querySelector('.title-h1').classList.add('big');
+                }
                 dotsItems[index].classList.remove('active');
             }
 

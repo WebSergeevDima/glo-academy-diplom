@@ -22,7 +22,7 @@ const sendForm = () => {
             const name = item.getAttribute('name');
             item.classList.remove('error');
 
-            if (name === 'tel' && (regTel.test(item.value.trim()) || item.value.trim().length < 1)) {
+            if (name === 'tel' && (regTel.test(item.value.trim()) || item.value.trim().length < 6)) {
                 success = false;
                 item.classList.add('error');
                 addMessage(errorText, 'error');

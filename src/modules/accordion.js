@@ -13,11 +13,14 @@ const accordion = () => {
     accordion.addEventListener('click', e => {
 
         const element = e.target.closest('.element:not(.active)');
+        const elementActive = e.target.closest('.element.active');
 
         if (element) {
             hiddenElements();
             element.classList.add('active');
             element.querySelector('.element-content').style.display = 'block';
+        } else if (elementActive && e.target.classList.contains('title')) {
+            hiddenElements();
         }
 
     });

@@ -1,7 +1,12 @@
 export const animateScroll = (el) => {
-    el.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+    const headerWrapper = document.querySelector('.header-wrapper');
+    const headerWrapperHeight = headerWrapper.clientHeight;
+    const rect = el.getBoundingClientRect();
+    const top = rect.top + document.documentElement.scrollTop - headerWrapperHeight;
+
+    window.scrollTo({
+        top: top,
+        behavior: "smooth"
     });
 }
 
