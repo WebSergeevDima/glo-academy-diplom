@@ -3,7 +3,8 @@ import {Modal} from "./helpers";
 export const callback = () => {
 
     const body = document.querySelector('body');
-    const modal = new Modal();
+    const form = document.querySelector('form[name="form-callback"]');
+    const modal = new Modal(form);
 
     body.addEventListener('click', e => {
 
@@ -16,6 +17,7 @@ export const callback = () => {
 
         if (e.target.closest('.modal-close') || e.target.closest('.modal-overlay')) {
             modal.display = 'none';
+            modal.resetForm();
         }
 
     });
